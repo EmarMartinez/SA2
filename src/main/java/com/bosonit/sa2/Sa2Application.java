@@ -14,14 +14,16 @@ import javax.annotation.PostConstruct;
 @EnableConfigurationProperties(StorageProperties.class)
 public class Sa2Application {
 
-	public static String ruta;
+	public static String ruta = "";
 
 	public static void main(String[] args) {
-		SpringApplication.run(Sa2Application.class, args);
 		if(args.length>0) {
 			ruta = args[0];
 //			System.out.println("Hola desde main" + ruta);
 		}
+
+		SpringApplication.run(Sa2Application.class, args);
+
 
 	}
 
